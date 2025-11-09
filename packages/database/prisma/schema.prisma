@@ -1,0 +1,51 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vendor {
+  id           String     @id @default(uuid())
+  name         String     @unique
+  address      String?
+  tax_id       String?
+  invoices     Invoice[]
+}
+
+model Invoice {
+  id              String     @id @default(uuid())
+  doc_id          String     @unique // The original document ID
+  invoice_number  String?
+  invoice_date    DateTime?  @db.Date
+  delivery_date   DateTime?  @db.Date
+  sub_total       Float      @default(0)
+  total_tax       Float      @default(0)
+  invoice_total   Float      @default(0)
+  currency_symbol String?
+  document_type   String?
+  due_date        DateTime?  @db.Date
+  net_days        Int?
+  vendor_id       String
+  vendor          Vendor     @relation(fields: [vendor_id], references: [id])
+  line_items      LineItem[]
+}
+
+model LineItem {
+  id              String  @id @default(uuid())
+  sr_no           Int
+  description     String
+  quantity        Float
+  unit_price      Float
+  total_price     Float
+  sachkonto       String?
+  bus_schluessel  String?
+  vat_rate        Float?
+  vat_amount      Float?
+  invoice_id      String
+  invoice         Invoice @relation(fields: [invoice_id], references: [id])
+}
