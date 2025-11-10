@@ -24,7 +24,7 @@ This project is a monorepo with three distinct services and a shared database pa
 | Layer | Component | Key Technologies | Deployment Host |
 | :--- | :--- | :--- | :--- |
 | **Frontend/UI** | `apps/web` | Next.js 14 (App Router), TypeScript, Tailwind CSS, shadcn/ui, Recharts | Vercel |
-| **Backend API** | `apps/api` | Next.js 14 (API Routes), TypeScript, Prisma ORM | Vercel |
+| **Backend API** | `apps/api` | Next.js 14 (API Routes), TypeScript, Prisma ORM | Render |
 | **AI Layer** | `apps/vanna-ai`| Python (FastAPI), Groq SDK (Llama 3.3 70B), SQL Alchemy | Render |
 | **Database** | `packages/database`| PostgreSQL (Neon), Prisma | Neon (Serverless) |
 
