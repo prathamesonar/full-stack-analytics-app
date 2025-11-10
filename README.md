@@ -14,7 +14,7 @@ This is a production-grade, full-stack web application built in a Turborepo mono
 ## 📷 Preview
 ![Dashboard Preview](https://github.com/user-attachments/assets/673a2571-ba75-43ee-97e4-1831e9f9c73e)
 
-
+![chatbot Preview](https://github.com/user-attachments/assets/4c6544ca-cee3-4693-8300-248ada9d60d1)
 ---
 
 ## ⚙️ Tech Stack & Architecture
