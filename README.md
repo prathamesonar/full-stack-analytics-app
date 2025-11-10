@@ -6,7 +6,7 @@ This is a production-grade, full-stack web application built in a Turborepo mono
 ##  Live Demo URLs
 
 * **Frontend (Vercel):** https://full-analyticsps.vercel.app
-* **Backend API (Render):** https://dashboard.backend.vercel.app/api
+* **Backend API (Render):** https://analytics-api-rkeh.onrender.com/api
 * **Vanna AI (Render):** https://vannaapp.onrender.com
 
 ---
